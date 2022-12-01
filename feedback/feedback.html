@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback</title>
+    <link rel="stylesheet" href="/feedback/feedback.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f16d69c8e2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div id="loader-image-wrapper">
+            <img src="/assets/images/anim/loader2.svg">
+        </div>
+    </div>
+    <header>
+        <img class="logo" src="/assets/images/college.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/profile/profile.html">My Profile</a></li>
+                <li><a href="/attendance/attendance.html">My Class Attendance</a></li>
+                <li><a href="/about/about.html">About the Team</a></li>
+                <li><a href="/error/error.html">Fee Dashboard</a></li>
+                <li><a href="/announcement/announcement.html">Announcements</a></li>
+                <li><a href="/rms/rms.html">Lodge RMS Request</a></li>
+                <li><a href="/feedback/feedback.html">Rate Us</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="https://forms.gle/KrgzDjdHDZHw3NRj9">
+            <button>
+                Report an Error
+            </button>
+        </a>
+    </header>
+    <div class="body-dash">
+        <div class="feedback">
+            <div class="feedbackbox">
+                <div class="emoji">
+                    <div id="emoji">
+                        <img src="/assets/images/icons/feedback/poor.png">
+                        <img src="/assets/images/icons/feedback/bad.png">
+                        <img src="/assets/images/icons/feedback/okay.png">
+                        <img src="/assets/images/icons/feedback/good.png">
+                        <img src="/assets/images/icons/feedback/excellent.png">
+                    </div>
+                </div>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <a id="give" href="/dashboard/dashboard.html">
+                <span>
+                    Submit
+                </span>
+            </a>
+        </div>
+    </div>
+    <script>
+        var stars = document.getElementsByClassName("fa-solid");
+        var emoji = document.getElementById("emoji");
+
+        stars[0].onclick = function () {
+            stars[0].style.color = "#ffd93b"
+            stars[1].style.color = "#e4e4e4"
+            stars[2].style.color = "#e4e4e4"
+            stars[3].style.color = "#e4e4e4"
+            stars[4].style.color = "#e4e4e4"
+            emoji.style.transform = "translateX(0)"
+        }
+        stars[1].onclick = function () {
+            stars[0].style.color = "#ffd93b"
+            stars[1].style.color = "#ffd93b"
+            stars[2].style.color = "#e4e4e4"
+            stars[3].style.color = "#e4e4e4"
+            stars[4].style.color = "#e4e4e4"
+            emoji.style.transform = "translateX(-100px)"
+        }
+        stars[2].onclick = function () {
+            stars[0].style.color = "#ffd93b"
+            stars[1].style.color = "#ffd93b"
+            stars[2].style.color = "#ffd93b"
+            stars[3].style.color = "#e4e4e4"
+            stars[4].style.color = "#e4e4e4"
+            emoji.style.transform = "translateX(-200px)"
+        }
+        stars[3].onclick = function () {
+            stars[0].style.color = "#ffd93b"
+            stars[1].style.color = "#ffd93b"
+            stars[2].style.color = "#ffd93b"
+            stars[3].style.color = "#ffd93b"
+            stars[4].style.color = "#e4e4e4"
+            emoji.style.transform = "translateX(-300px)"
+        }
+        stars[4].onclick = function () {
+            stars[0].style.color = "#ffd93b"
+            stars[1].style.color = "#ffd93b"
+            stars[2].style.color = "#ffd93b"
+            stars[3].style.color = "#ffd93b"
+            stars[4].style.color = "#ffd93b"
+            emoji.style.transform = "translateX(-400px)"
+        }
+    </script>
+    <script>
+        var loader = document.getElementsByClassName("pre-loader");
+        window.addEventListener('load', function (load) {
+            window.removeEventListener('load', load, false);
+            setTimeout(function () { loader[0].style.display = 'none' }, 600);
+        }, false);
+    </script>
+</body>
+
+</html>

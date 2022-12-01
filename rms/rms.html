@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Management System</title>
+    <link rel="stylesheet" type="text/css" href="/rms/rms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div id="loader-image-wrapper">
+            <img src="/assets/images/anim/loader2.svg">
+        </div>
+    </div>
+    <header>
+        <img class="logo" src="/assets/images/college.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="/profile/profile.html">My Profile</a></li>
+                <li><a href="/attendance/attendance.html">My Class Attendance</a></li>
+                <li><a href="/about/about.html">About the Team</a></li>
+                <li><a href="/error/error.html">Fee Dashboard</a></li>
+                <li><a href="/announcement/announcement.html">Announcements</a></li>
+                <li><a href="/rms/rms.html">Lodge RMS Request</a></li>
+                <li><a href="/feedback/feedback.html">Rate Us</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="https://forms.gle/KrgzDjdHDZHw3NRj9">
+            <button>
+                Report an Error
+            </button>
+        </a>
+    </header>
+    <section id="rms-form">
+        <div class="container">
+            <div class="contact-info">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="/assets/images/icons/rms/gps.png"></span>
+                            <span> 379th Neuron
+                                Prefrontal Cortex, Yashaswee's Brain
+                                12214643</span>
+                        </li>
+                        <li>
+                            <span><img src="/assets/images/icons/rms/email.png"></span>
+                            <span>tritance.org@edu.in</span>
+                        </li>
+                        <li>
+                            <span><img src="/assets/images/icons/rms/phone-call.png"></span>
+                            <span>We are a fictional Organization</span>
+                        </li>
+                </div>
+            </div>
+        </div>
+        <div class="container-form">
+            <h2> Lodge RMS Request </h2>
+            <div class="form-box">
+                <div class="input-box w50">
+                    <select name="category" id="category">
+                        <option value="grievance">Grievance</option>
+                        <option value="request">Request</option>
+                        <option value="enquiry">Enquiry</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                    <span>Category</span>
+                </div>
+                <div class="input-box w50">
+                    <select name="department" id="department">
+                        <option value="admission">Admissions</option>
+                        <option value="reception">Reception</option>
+                        <option value="hostel">Hostels</option>
+                        <option value="chancellory">Chancellory</option>
+                    </select>
+                    <span>Department</span>
+                </div>
+                <div class="input-box w50">
+                    <input type="text" name="" required>
+                    <span>Subject</span>
+                </div>
+                <div class="input-box w100">
+                    <input type="text" name="" required>
+                    <span>Contact Number</span>
+                </div>
+                <div class="input-box w100">
+                    <textarea name="" required></textarea>
+                    </textarea>
+                    <span>Description</span>
+                </div>
+                <div class="input-box w100">
+                    <input id="btn" type="submit" value="Send">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    var loader = document.getElementsByClassName("pre-loader");
+    window.addEventListener('load', function (load) {
+        window.removeEventListener('load', load, false);
+        setTimeout(function () { loader[0].style.display = 'none' }, 600);
+    }, false);
+</script>
+
+</html>
